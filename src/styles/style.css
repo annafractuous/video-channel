@@ -1,0 +1,224 @@
+.active-video {
+  background-color: black;
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  position: relative;
+  z-index: 1;
+  color: white; }
+  .active-video__container {
+    height: 200px; }
+  .active-video__info {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    opacity: 1; }
+    .active-video__info-title {
+      margin-bottom: 0;
+      font-size: 20px; }
+    .active-video__info-user {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 12px;
+      color: #efefef; }
+    .active-video__info.hidden {
+      opacity: 0; }
+  .active-video__video {
+    height: 100%; }
+    .active-video__video .vimeo-image {
+      background-size: cover; }
+    .active-video__video .vimeo-embed {
+      height: 100%;
+      width: 100%; }
+      .active-video__video .vimeo-embed iframe {
+        height: 100%;
+        width: 100%; }
+  .active-video .vimeo-play-button {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -37px;
+    margin-top: -37px;
+    border: none;
+    border-radius: 50%;
+    background-color: #172322;
+    opacity: .8; }
+    .active-video .vimeo-play-button svg {
+      height: 35px;
+      margin-top: .5em;
+      margin-left: .5em;
+      fill: white; }
+    .active-video .vimeo-play-button:hover {
+      background-color: #00acf2;
+      opacity: 1; }
+
+@media screen and (min-width: 480px) {
+  .active-video__container {
+    height: 300px; }
+  .active-video__info-title {
+    font-size: 36px; }
+  .active-video__info-user {
+    font-size: 14px; } }
+@media screen and (min-width: 992px) {
+  .active-video__container {
+    height: 350px; } }
+.videos-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow-y: scroll;
+  padding: 0; }
+
+.video-item {
+  height: 95px;
+  padding: 10px 10px 5px 10px;
+  margin-top: 10px;
+  background-color: #efefef;
+  border-radius: 2px; }
+  .video-item-details {
+    position: relative;
+    height: 100%;
+    padding: 0 10px 0 0; }
+    .video-item-details__description-title {
+      margin: 0;
+      font-size: 13px; }
+    .video-item-details__description-summary {
+      font-size: 12px;
+      display: none; }
+    .video-item-details__info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between;
+      color: #a9a9a9;
+      font-size: 12px; }
+      .video-item-details__info-user__avatar {
+        display: none;
+        padding-right: 5px; }
+      .video-item-details__info-stats__stat {
+        padding-right: 8px; }
+        .video-item-details__info-stats__stat .glyphicon {
+          padding-right: 3px; }
+  .video-item-thumbnail {
+    padding: 0;
+    max-width: 100px;
+    float: right; }
+    .video-item-thumbnail__image {
+      max-height: 75px;
+      max-width: 100%; }
+    .video-item-thumbnail__play-icon {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      margin: -14px 0 0 -12px;
+      background-color: white;
+      opacity: .8; }
+      .video-item-thumbnail__play-icon .glyphicon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 16px;
+        margin: -9px 0 0 -7px; }
+    .video-item-thumbnail__video-length {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2px 5px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      font-size: 10px; }
+    .video-item-thumbnail__button {
+      background: none;
+      border: 0;
+      color: inherit;
+      font: inherit;
+      line-height: normal;
+      overflow: visible;
+      padding: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; }
+      .video-item-thumbnail__button::-moz-focus-inner {
+        border: 0;
+        padding: 0; }
+      .video-item-thumbnail__button:hover {
+        cursor: pointer; }
+        .video-item-thumbnail__button:hover .video-item-thumbnail__play-icon {
+          display: block; }
+        .video-item-thumbnail__button:hover::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.3); }
+
+@media screen and (min-width: 480px) {
+  .video-item {
+    height: 200px;
+    padding: 10px 15px 5px 15px; }
+    .video-item-details__description {
+      height: 130px; }
+      .video-item-details__description-title {
+        margin-bottom: 10px;
+        font-size: 18px; }
+        .video-item-details__description-title:hover {
+          cursor: pointer; }
+      .video-item-details__description-summary {
+        display: block; }
+    .video-item-details__info {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .video-item-details__info-user__avatar {
+        display: inline; }
+    .video-item-thumbnail {
+      max-width: 200px; }
+      .video-item-thumbnail__image {
+        width: 100%;
+        max-width: 200px;
+        max-height: none; }
+      .video-item-thumbnail__play-icon {
+        height: 40px;
+        width: 40px;
+        margin: -20px 0 0 -20px; }
+        .video-item-thumbnail__play-icon .glyphicon {
+          font-size: 24px;
+          margin: -13px 0 0 -10px; }
+      .video-item-thumbnail__video-length {
+        font-size: 12px; } }
+.video-channel h1, .video-channel h2, .video-channel h3, .video-channel h4, .video-channel h5, .video-channel h6 {
+  margin-top: 0; }
+
+/*# sourceMappingURL=style.css.map */

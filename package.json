@@ -1,0 +1,22 @@
+{
+  "name": "video-channel-challenge",
+  "version": "1.0.0",
+  "author": "Anna Rasshivkina",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-vimeo": "^1.0.0",
+    "whatwg-fetch": "^2.0.2"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.4",
+    "react-scripts": "0.8.4"
+  }
+}

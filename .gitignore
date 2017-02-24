@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+
+# sensitive info
+src/api-credentials.js
+
+# misc
+.DS_Store
+npm-debug.log

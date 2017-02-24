@@ -1,0 +1,13 @@
+@import './util/_mixins';
+@import './util/_variables';
+@import './components/_active-video';
+@import './components/_videos-list';
+@import './components/_video-item';
+
+// Global
+
+.video-channel {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}

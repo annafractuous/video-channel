@@ -1,0 +1,184 @@
+.video-item {
+    height: 95px;
+    padding: 10px 10px 5px 10px;
+    margin-top: 10px;
+    background-color: $light-grey;
+    border-radius: 2px;
+
+    &-details {
+        position: relative;
+        height: 100%;
+        padding: 0 10px 0 0;
+
+        &__description {
+            &-title {
+                margin: 0;
+                font-size: 13px;
+            }
+
+            &-summary {
+                font-size: 12px;
+                display: none;
+            }
+        }
+
+        &__info {
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            color: $dark-grey;
+            font-size: 12px;
+
+            &-user__avatar {
+                display: none;
+                padding-right: 5px;
+            }
+
+            &-stats__stat {
+                padding-right: 8px;
+
+                .glyphicon {
+                    padding-right: 3px;
+                }
+            }
+        }
+    }
+
+    &-thumbnail {
+        padding: 0;
+        max-width: 100px;
+        float: right;
+
+        &__image {
+            max-height: 75px;
+            max-width: 100%;
+        }
+
+        &__play-icon {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            margin: -14px 0 0 -12px;
+            background-color: white;
+            opacity: .8;
+
+            .glyphicon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 16px;
+                margin: -9px 0 0 -7px;
+            }
+        }
+
+        &__video-length {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 2px 5px;
+            background-color: rgba(0,0,0,.4);
+            color: white;
+            font-size: 10px;
+        }
+
+        &__button {
+            background: none;
+            border: 0;
+            color: inherit;
+            font: inherit;
+            line-height: normal;
+            overflow: visible;
+            padding: 0;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+
+            &::-moz-focus-inner {
+                border: 0;
+                padding: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .video-item-thumbnail__play-icon {
+                    display: block;
+                }
+
+                &::before {
+                    content: '';
+                	position: absolute;
+                	top: 0;
+                	right: 0;
+                	bottom: 0;
+                	left: 0;
+                    background-color: rgba(0,0,0,.3);
+                }
+            }
+        }
+    }
+}
+
+// media queries
+@media screen and (min-width: $tablet) {
+    .video-item {
+        height: 200px;
+        padding: 10px 15px 5px 15px;
+
+        &-details {
+            &__description {
+                height: 130px;
+
+                &-title {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                &-summary {
+                    display: block;
+                }
+            }
+
+            &__info {
+                @include flex-direction(row);
+
+                &-user__avatar {
+                    display: inline;
+                }
+            }
+        }
+
+        &-thumbnail {
+            max-width: 200px;
+
+            &__image {
+                width: 100%;
+                max-width: 200px;
+                max-height: none;
+            }
+
+            &__play-icon {
+                height: 40px;
+                width: 40px;
+                margin: -20px 0 0 -20px;
+
+                .glyphicon {
+                    font-size: 24px;
+                    margin: -13px 0 0 -10px;
+                }
+            }
+
+            &__video-length {
+                font-size: 12px;
+            }
+        }
+    }
+}
