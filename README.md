@@ -1,6 +1,6 @@
 # Video Channel Viewer
 
-![screencast](http://g.recordit.co/ESs0LmiBLi.gif)
+![screencast](http://g.recordit.co/huJOtA0Vqu.gif)
 
 To Run:
 
