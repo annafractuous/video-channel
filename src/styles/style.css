@@ -220,5 +220,7 @@
         font-size: 12px; } }
 .video-channel h1, .video-channel h2, .video-channel h3, .video-channel h4, .video-channel h5, .video-channel h6 {
   margin-top: 0; }
+.video-channel__search-bar {
+  border: none; }
 
 /*# sourceMappingURL=style.css.map */
