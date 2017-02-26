@@ -6,4 +6,5 @@ src/api-credentials.js
 
 # misc
 .DS_Store
+.sass-cache
 npm-debug.log
