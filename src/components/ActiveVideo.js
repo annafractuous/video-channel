@@ -9,7 +9,7 @@ class ActiveVideo extends Component {
             // playing: false
         }
         this.onError = this.onError.bind(this);
-        this.hideInfo = this.hideInfo.bind(this);
+        // this.hideInfo = this.hideInfo.bind(this);
     }
 
     onError() {
