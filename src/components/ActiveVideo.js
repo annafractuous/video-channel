@@ -23,8 +23,13 @@ class ActiveVideo extends Component {
 
     render() {
         // let infoClass = this.state.playing ? 'active-video__info hidden' : 'active-video__info';
-        let content = this.state.error || this.props.message ||
-            <div className='active-video__container col-sm-8 col-sm-offset-2'>
+        let content;
+        if (this.state.error) {
+            content = (<p className='active-video__error'>Sorry, this video could not be found</p>);
+        } else if (this.props.message) {
+            content = (<p className='active-video__message'>{this.props.message}</p>);
+        } else {
+            content = (<div className='active-video__container col-sm-8 col-sm-offset-2'>
                 <Vimeo
                     videoId={this.props.video.id.toString()}
                     className='active-video__video'
@@ -35,7 +40,8 @@ class ActiveVideo extends Component {
                     <h1 className='active-video__info-title'>{this.props.video.title}</h1>
                     <h5 className='active-video__info-user'>from {this.props.video.user_name}</h5>
                 </figcaption> */}
-            </div>;
+            </div>);
+        }
 
         return (
             <section className='active-video container-fluid'>
