@@ -8,6 +8,8 @@ class ActiveVideo extends Component {
             error: undefined
             // playing: false
         }
+        this.onError = this.onError.bind(this);
+        this.hideInfo = this.hideInfo.bind(this);
     }
 
     onError() {
@@ -26,8 +28,8 @@ class ActiveVideo extends Component {
                 <Vimeo
                     videoId={this.props.video.id.toString()}
                     className='active-video__video'
-                    onError={this.onError.bind(this)}
-                    // onPlay={this.hideInfo.bind(this)}
+                    onError={this.onError}
+                    // onPlay={this.hideInfo}
                 />
                 {/* <figcaption className={infoClass}>
                     <h1 className='active-video__info-title'>{this.props.video.title}</h1>

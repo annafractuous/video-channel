@@ -14,6 +14,8 @@ class VideoChannel extends Component {
             videos: undefined,
             activeVideo: 0
         }
+        this.searchChannel = this.searchChannel.bind(this);
+        this.onVideoSelect = this.onVideoSelect.bind(this);
     }
 
     componentDidMount() {
@@ -75,12 +77,12 @@ class VideoChannel extends Component {
                     type='text'
                     className='video-channel__search-bar form-control'
                     aria-describedby='channel-search'
-                    onKeyPress={this.searchChannel.bind(this)}
+                    onKeyPress={this.searchChannel}
                 />
                 { activeVideo }
                 <VideosList
                     videosData={this.state.videos}
-                    onVideoSelect={this.onVideoSelect.bind(this)}
+                    onVideoSelect={this.onVideoSelect}
                 />
             </div>
         )

@@ -4,6 +4,11 @@ import thousands from '../util/thousands';
 import getDuration from '../util/duration';
 
 class VideoItem extends Component {
+    constructor() {
+        super();
+        this.selectVideo = this.selectVideo.bind(this);
+    }
+
     selectVideo() {
         this.props.onVideoSelect(this.props.idx);
     }
@@ -27,7 +32,7 @@ class VideoItem extends Component {
             <div className='video-item'>
                 <figcaption className='video-item-details col-xs-8'>
                     <div className='video-item-details__description'>
-                        <h4 className='video-item-details__description-title' onClick={this.selectVideo.bind(this)}>{video.title}</h4>
+                        <h4 className='video-item-details__description-title' onClick={this.selectVideo}>{video.title}</h4>
                         <p className='video-item-details__description-summary'>
                             {truncate(firstPara, this.getSummaryCutoff())}
                         </p>
@@ -60,7 +65,7 @@ class VideoItem extends Component {
                     </div>
                 </figcaption>
                 <figure className='video-item-thumbnail col-xs-4'>
-                    <button className='video-item-thumbnail__button' onClick={this.selectVideo.bind(this)} aria-label="View video">
+                    <button className='video-item-thumbnail__button' onClick={this.selectVideo} aria-label="View video">
                         <span className='video-item-thumbnail__play-icon'>
                             <span className='glyphicon glyphicon-play'></span>
                         </span>
