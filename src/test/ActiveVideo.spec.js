@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow, debug } from 'enzyme';
+import { mount, debug } from 'enzyme';
 import { expect } from 'chai';
 
 import ActiveVideo from '../components/ActiveVideo';
