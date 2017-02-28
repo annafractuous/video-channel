@@ -46,7 +46,7 @@ class ActiveVideo extends Component {
 }
 
 ActiveVideo.PropTypes = {
-    video: React.PropTypes.object.required,
+    video: React.PropTypes.object,
     message: React.PropTypes.string
 }
 

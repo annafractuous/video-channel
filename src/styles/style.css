@@ -25,6 +25,17 @@
       opacity: 0; }
   .active-video__video {
     height: 100%; }
+    .active-video__video .vimeo-loading {
+      height: 100%;
+      width: 100%;
+      position: relative; }
+      .active-video__video .vimeo-loading svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -16px;
+        margin-left: -16px;
+        fill: white; }
     .active-video__video .vimeo-image {
       background-size: cover; }
     .active-video__video .vimeo-embed {
