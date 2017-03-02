@@ -51,15 +51,21 @@ class VideoItem extends Component {
                         <div className='video-item-details__info-stats'>
                             <span className='video-item-details__info-stats__stat'>
                                 <span className='glyphicon glyphicon-eye-open'></span>
-                                {thousands(video.stats_number_of_plays) || 0}
+                                <span className='video-item-details__info-stats__stat-plays'>
+                                    {thousands(video.stats_number_of_plays) || 0}
+                                </span>
                             </span>
                             <span className='video-item-details__info-stats__stat'>
                                 <span className='glyphicon glyphicon-heart'></span>
-                                {thousands(video.stats_number_of_likes) || 0}
+                                <span className='video-item-details__info-stats__stat-likes'>
+                                    {thousands(video.stats_number_of_likes) || 0}
+                                </span>
                             </span>
                             <span className='video-item-details__info-stats__stat'>
                                 <span className='glyphicon glyphicon-comment'></span>
-                                {thousands(video.stats_number_of_comments) || 0}
+                                <span className='video-item-details__info-stats__stat-comments'>
+                                    {thousands(video.stats_number_of_comments) || 0}
+                                </span>
                             </span>
                         </div>
                     </div>
