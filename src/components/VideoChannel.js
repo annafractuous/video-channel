@@ -19,7 +19,7 @@ class VideoChannel extends Component {
     }
 
     componentDidMount() {
-        this.loadChannel('1341');
+        this.props.channel ? this.loadChannel(this.props.channel) : this.loadChannel('staffpicks');
     }
 
     loadChannel(id) {
@@ -88,6 +88,10 @@ class VideoChannel extends Component {
         )
     }
 
+}
+
+VideoChannel.PropTypes = {
+    channel: React.PropTypes.string
 }
 
 export default VideoChannel;
